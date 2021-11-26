@@ -41,8 +41,7 @@ describe('test book fight', () => {
         cy.get('select[name="airline"]').select("Unified Airlines")
         cy.get('input[name="findFlights"]').click()
         cy.contains("After flight finder")
-        cy.log("alooooo")
-        cy.log('another message', ['one', 'two', 'three'])
+        cy.log("success")
 
     })
     it('Book fight with data driven', function(){
