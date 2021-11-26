@@ -19,5 +19,9 @@ checkNOTemty(element){
     const field=cy.get(element)
     field.should('not.have.value','')
 }
+visible(element){
+    const field=cy.get(element)
+    field.should('be.visible')
+}
 }
 export default Login
