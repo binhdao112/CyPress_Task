@@ -47,7 +47,7 @@ describe('test book fight', () => {
     it('Book fight with data driven', function(){
         cy.visitHome()
         cy.get('a[href="reservation.php"]').click()
-        cy.get('td>input[type="image"][name="findFlights"][src="images/continue.gif"]').should('be.visible')
+        bookflightObj.visible('td>input[type="image"][name="findFlights"][src="images/continue.gif"]')
         //call function from bookflightObj to check radio, select option, submit and verify
         bookflightObj.checkradio(this.element.radio_tripType,this.demoData.tripType)
         bookflightObj.selection(this.element.selecttion_passCount,this.demoData.passCount)
@@ -60,6 +60,7 @@ describe('test book fight', () => {
         bookflightObj.selection(this.element.selection_Airline,this.demoData.airLine)
         bookflightObj.submit(this.element.button_submit)
         bookflightObj.verify('font',"After flight finder - No Seats Avaialble")
+        bookflightObj.visible('td > a > img[src="images/home.gif"]')
         cy.log("success")
         
         
