@@ -70,7 +70,7 @@ describe('test book fight', () => {
         this.item.forEach(element => {
             cy.visitHome()
             cy.get('a[href="reservation.php"]').click()
-            cy.get('td>input[type="image"][name="findFlights"][src="images/continue.gif"]').should('be.visible')
+            bookflightObj.visible('td>input[type="image"][name="findFlights"][src="images/continue.gif"]')
             bookflightObj.checkradio(this.element.radio_tripType,element.tripType)
             bookflightObj.selection(this.element.selecttion_passCount,element.passCount)
             bookflightObj.selection(this.element.selection_FromPort,element.fromPort)
@@ -82,7 +82,7 @@ describe('test book fight', () => {
             bookflightObj.selection(this.element.selection_Airline,element.airLine)
             bookflightObj.submit(this.element.button_submit)
             bookflightObj.verify('font',"After flight finder - No Seats Avaialble")
-            cy.get('td > a > img[src="images/home.gif"]').should('be.visible')
+            bookflightObj.visible('td > a > img[src="images/home.gif"]')
             cy.log("success")
         });
 
