@@ -1,4 +1,8 @@
 class BookFlight{
+visitBookFlight(){
+    cy.visitHome()
+    cy.get('a[href="reservation.php"]').click()      
+}
 checkradio(element,value){
     const checkbox=cy.get(element)
     checkbox.check(value)
