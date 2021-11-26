@@ -17,5 +17,9 @@ verify(element,value){
     const field=cy.get(element)
     field.should('contain.text',value)
 }
+visible(element){
+    const field=cy.get(element)
+    field.should('be.visible')
+}
 }
 export default BookFlight
