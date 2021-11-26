@@ -5,7 +5,7 @@ Setup Enviroment:
 
 * In Terminal, use `npm install` to setup Cypress and dependencies
 
-Open and Start test with Cypress
+Open and Start test with Cypress:
 ---------------
 * In terminal, use `npm run test` or `npx cypress open` to start CYPRESS ***(:pray::pray:The first time start Cypess can error "Cypress verification timed out.",:fist_right::fist_right: try again, from second time Cypress open nomal)*** 
 
