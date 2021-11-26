@@ -45,8 +45,7 @@ describe('test book fight', () => {
 
     })
     it('Book fight with data driven', function(){
-        cy.visitHome()
-        cy.get('a[href="reservation.php"]').click()
+        bookflightObj.visitBookFlight()
         bookflightObj.visible('td>input[type="image"][name="findFlights"][src="images/continue.gif"]')
         //call function from bookflightObj to check radio, select option, submit and verify
         bookflightObj.checkradio(this.element.radio_tripType,this.demoData.tripType)
@@ -69,8 +68,7 @@ describe('test book fight', () => {
     it('Book fight with muti data driven', function(){
         //call function from bookflightObj to check radio, select option, submit and verify
         this.item.forEach(element => {
-            cy.visitHome()
-            cy.get('a[href="reservation.php"]').click()
+            bookflightObj.visitBookFlight()
             bookflightObj.visible('td>input[type="image"][name="findFlights"][src="images/continue.gif"]')
             bookflightObj.checkradio(this.element.radio_tripType,element.tripType)
             bookflightObj.selection(this.element.selecttion_passCount,element.passCount)
