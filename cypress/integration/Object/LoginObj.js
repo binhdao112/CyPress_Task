@@ -1,4 +1,8 @@
 class Login{
+visitLogin(){
+    cy.visitHome()
+    cy.get('a[href="login.php"]').click()
+}
 fill(element,value){
     const field=cy.get(element).type(value)
     return this
