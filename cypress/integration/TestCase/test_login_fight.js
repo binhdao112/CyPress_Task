@@ -28,13 +28,13 @@ describe('', () => {
     // skip test case
     it('Login not data driven', () => {
         // fill input
-        loginObj.checkemty("input[name='userName']")
-        loginObj.checkemty("input[name='password']")
+        cy.get("input[name='userName']").should('have.value','')
+        cy.get("input[name='password']").should('have.value','')
         cy.get('input[type="submit"]').should('be.visible')
         cy.get('input[name="userName"]').type("tutorial")
         cy.get('input[name="password"]').type("Test@123")
-        loginObj.checkNOTemty("input[name='userName']")
-        loginObj.checkNOTemty("input[name='password']")
+        cy.get("input[name='userName']").should('not.have.value','')
+        cy.get("input[name='password']").should('not.have.value','')
         //submit form
         cy.get('input[name="submit"]').click()
         //verify
@@ -45,7 +45,7 @@ describe('', () => {
     it('Login with data driven', function() {
         cy.visitHome()
         cy.get('a[href="login.php"]').click()
-        cy.get('input[type="submit"]').should('be.visible')
+        loginObj.visible('input[type="submit"]')
         loginObj.checkemty(this.element.input_pass)
         loginObj.checkemty(this.element.input_username)
         // call function from loginObj to fill username, password, submit and verify 
@@ -62,7 +62,7 @@ describe('', () => {
         this.item.forEach(element => {
             cy.visitHome()
             cy.get('a[href="login.php"]').click()
-            cy.get('input[type="submit"]').should('be.visible')
+            loginObj.visible('input[type="submit"]')
             loginObj.checkemty(this.element.input_username)
             loginObj.checkemty(this.element.input_pass)
             loginObj.fill(this.element.input_username,element.valid_user)
@@ -82,7 +82,7 @@ describe('', () => {
             cy.get('a[href="login.php"]').click()
             loginObj.checkemty(this.element.input_pass)
             loginObj.checkemty(this.element.input_username)
-            cy.get('input[type="submit"]').should('be.visible')
+            loginObj.visible('input[type="submit"]')
             loginObj.fill(this.element.input_username,element.valid_user)
             loginObj.fill(this.element.input_pass,'12132')
             loginObj.submit(this.element.submit_login)
