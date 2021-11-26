@@ -18,7 +18,7 @@ describe('', () => {
             this.item=item;
         })
     })
-    it('visit login page', () => {
+    it('Visit login page', () => {
         // Go to http://demo.guru99.com/test/newtours/
         // commands add in command.js in support
         cy.visitHome()
@@ -43,8 +43,7 @@ describe('', () => {
         loginObj.verify('td>a[href="index.php"]',"SIGN-OFF")
     });
     it('Login with data driven', function() {
-        cy.visitHome()
-        cy.get('a[href="login.php"]').click()
+        loginObj.visitLogin()
         loginObj.visible('input[type="submit"]')
         loginObj.checkemty(this.element.input_pass)
         loginObj.checkemty(this.element.input_username)
@@ -60,8 +59,7 @@ describe('', () => {
     });
     it('Login surcess with muti data driven', function() {
         this.item.forEach(element => {
-            cy.visitHome()
-            cy.get('a[href="login.php"]').click()
+            loginObj.visitLogin()
             loginObj.visible('input[type="submit"]')
             loginObj.checkemty(this.element.input_username)
             loginObj.checkemty(this.element.input_pass)
@@ -78,8 +76,7 @@ describe('', () => {
     });
     it('Login fail with muti data driven', function() {
         this.item.forEach(element => {
-            cy.visitHome()
-            cy.get('a[href="login.php"]').click()
+            loginObj.visitLogin()
             loginObj.checkemty(this.element.input_pass)
             loginObj.checkemty(this.element.input_username)
             loginObj.visible('input[type="submit"]')
@@ -92,8 +89,7 @@ describe('', () => {
 
     });
     it('Login with emty user and password', function() {
-        cy.visitHome()
-        cy.get('a[href="login.php"]').click()
+        loginObj.visitLogin()
         loginObj.checkemty(this.element.input_pass)
         loginObj.checkemty(this.element.input_username)
         loginObj.visible('input[type="submit"]')
