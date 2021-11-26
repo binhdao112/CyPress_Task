@@ -1,6 +1,6 @@
 import BookFlight from '../Object/FlightObj'
 
-describe('test book fight', () => {
+describe('Test book fight', () => {
     const bookflightObj= new BookFlight()
     //Get data from element_book_flight.json
     beforeEach(function (){
