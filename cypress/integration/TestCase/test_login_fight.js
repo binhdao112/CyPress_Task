@@ -91,4 +91,15 @@ describe('', () => {
         });
 
     });
+    it('Login with emty user and password', function() {
+        cy.visitHome()
+        cy.get('a[href="login.php"]').click()
+        loginObj.checkemty(this.element.input_pass)
+        loginObj.checkemty(this.element.input_username)
+        loginObj.visible('input[type="submit"]')
+        loginObj.submit(this.element.submit_login)
+        cy.get('h3').should("contain","Login Successfully")
+        loginObj.verify("font > b","Thank you for Loggin.")
+
+    });
 })
