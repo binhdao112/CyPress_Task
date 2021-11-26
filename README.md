@@ -2,7 +2,7 @@
 Setup Enviroment:
 --------------
 * Install NodeJS in [NodeJS Home](https://nodejs.org/)
-* 
+
 * In Terminal, use `npm install` to setup Cypress and dependencies
 
 Open and Start test with Cypress
