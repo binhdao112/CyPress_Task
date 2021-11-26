@@ -1,3 +1,3 @@
-# Demo
-1. Run file open_cypress.bat to open cypress
+# Test booking flight and login with CyPress
+1. install NodeJS in https://nodejs.org/
 2. Choose test file first-test.js to run
