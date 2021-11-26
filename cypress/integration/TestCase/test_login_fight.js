@@ -1,5 +1,5 @@
 import Login from '../Object/LoginObj'
-describe('', () => {
+describe('Test login', () => {
     const loginObj=new Login()
     //Get data from element_login.json
     beforeEach(function (){
