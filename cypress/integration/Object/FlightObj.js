@@ -1,0 +1,21 @@
+class BookFlight{
+checkradio(element,value){
+    const checkbox=cy.get(element)
+    checkbox.check(value)
+    return this
+}
+selection(element,value){
+    const checkbox=cy.get(element)
+    checkbox.select(value)
+    return this
+}
+submit(element){
+    const button=cy.get(element)
+    button.click()
+}
+verify(element,value){
+    const field=cy.get(element)
+    field.should('contain.text',value)
+}
+}
+export default BookFlight

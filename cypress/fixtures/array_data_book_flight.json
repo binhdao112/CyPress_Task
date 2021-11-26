@@ -1,0 +1,38 @@
+[
+    {
+        "tripType":"roundtrip",
+        "passCount":"2",
+        "fromPort":"New York",
+        "fromMonth":"June",
+        "fromDay":"6",
+        "toPort":"San Francisco",
+        "toMonth":"12",
+        "toDay":"30",
+        "serviceClass":"Business",
+        "airLine":"Blue Skies Airlines"
+    },
+    {
+        "tripType":"oneway",
+        "passCount":"2",
+        "fromPort":"Frankfurt",
+        "fromMonth":"June",
+        "fromDay":"9",
+        "toPort":"Portland",
+        "toMonth":"11",
+        "toDay":"10",
+        "serviceClass":"Coach",
+        "airLine":"Pangea Airlines"
+    },
+    {
+        "tripType":"oneway",
+        "passCount":"2",
+        "fromPort":"New York",
+        "fromMonth":"June",
+        "fromDay":"10",
+        "toPort":"London",
+        "toMonth":"12",
+        "toDay":"6",
+        "serviceClass":"First",
+        "airLine":"Unified Airlines"
+    }
+]

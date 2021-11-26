@@ -1,0 +1,6 @@
+{
+  "valid_user": "tutorial",
+  "valid_pass": "Test@123",
+  "valid_re_pass": "Test@123",
+  "user_mess": "User is empty"
+}
