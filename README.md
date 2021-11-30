@@ -14,7 +14,7 @@ Open and Start test with Cypress:
 
 
 
- ![image](https://user-images.githubusercontent.com/54032190/143527129-0a4b0f16-e5ef-4802-9c65-7c89f02e7743.png)
+![image](https://user-images.githubusercontent.com/54032190/143527129-0a4b0f16-e5ef-4802-9c65-7c89f02e7743.png)
 
 HTML Report
 ---------------
