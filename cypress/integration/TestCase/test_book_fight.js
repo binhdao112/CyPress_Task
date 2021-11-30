@@ -82,6 +82,7 @@ describe('Test book fight', () => {
             bookflightObj.submit(this.element.button_submit)
             bookflightObj.verify('font',"After flight finder - No Seats Avaialble")
             bookflightObj.visible('td > a > img[src="images/home.gif"]')
+            cy.screenshot()
             cy.log("success")
         });
 

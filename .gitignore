@@ -126,3 +126,5 @@ open_cypress.bat
 package-lock.json
 yarn-lock.json
 cypress/reports/
+cypress/screenshots/
+cypress/videos/
