@@ -19,7 +19,7 @@ Open and Start test with Cypress:
 HTML Report
 ---------------
 * In terminal, use `npx cypress run` to run all test case and create html report 
-* You can see report by open file index in cypress/reports/
+* You can see report by open file index in **cypress/reports/**
 * In UI in HTML report Cypress:
 ![image](https://user-images.githubusercontent.com/54032190/144001156-67b41673-f431-473c-8e15-109b090ced24.png)
 
