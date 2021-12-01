@@ -62,7 +62,7 @@ describe('Test book fight', () => {
 
     });
 
-    it.only('Book fight with muti data driven', function () {
+    it('Book fight with muti data driven', function () {
         //call function from bookflightObj to check radio, select option, submit and verify
         this.dameDataSuccess.forEach(element => {
             bookflightObj.visitBookFlight()
