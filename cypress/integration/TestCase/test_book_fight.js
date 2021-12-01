@@ -8,7 +8,7 @@ describe('Test book fight', () => {
             this.demoData = demoData
         })
         cy.fixture("array_data_book_flight").then((item) => {
-            this.item = item;
+            this.dameDataSuccess = item.data_success;
         })
     })
     it('visit The PAGE', () => {
@@ -62,9 +62,9 @@ describe('Test book fight', () => {
 
     });
 
-    it('Book fight with muti data driven', function () {
+    it.only('Book fight with muti data driven', function () {
         //call function from bookflightObj to check radio, select option, submit and verify
-        this.item.forEach(element => {
+        this.dameDataSuccess.forEach(element => {
             bookflightObj.visitBookFlight()
             bookflightObj.verifyVisibleBookSubmit()
             //call function from bookflightObj to check radio, select option, submit and verify
