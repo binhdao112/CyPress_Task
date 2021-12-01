@@ -5,11 +5,12 @@ describe('Test login', () => {
     beforeEach(function (){
         //Get data from data_register_login.json
         cy.fixture("data_register_login").then((demoData) => {
-            this.demoData = demoData
+            this.demoData= demoData;
         })
         //Get data from array_data_register_login.json
         cy.fixture("array_data_login_register").then((item) =>{
-            this.item=item;
+            this.demoDataSuccess=item.data_success
+            this.demoDataFail=item.data_fail
         })
     })
     it('Visit login page', () => {
@@ -53,7 +54,7 @@ describe('Test login', () => {
         loginObj.verifyTextSignOff()
     });
     it('Login surcess with muti data driven', function() {
-        this.item.forEach(element => {
+        this.demoDataSuccess.forEach(element => {
         loginObj.visitLogin()
         loginObj.verifyVisibleLogin()
         loginObj.verifyEmtyUsernameInput()
@@ -72,15 +73,16 @@ describe('Test login', () => {
 
     });
     it('Login fail with muti data driven', function() {
-        this.item.forEach(element => {
-            loginObj.visitLogin()
+        cy.log(this.demoDataFail)
+        this.demoDataFail.forEach(element => {
+        loginObj.visitLogin()
         loginObj.verifyVisibleLogin()
         loginObj.verifyEmtyUsernameInput()
         loginObj.verifyEmtyPasswordInput()
         // call function from loginObj to fill username, password, submit and verify 
         //loginObj.fill(this.element.input_username,this.demoData.valid_user)
-        loginObj.enterUsername(this.demoData.valid_user)
-        loginObj.enterPassword("ưeq")
+        loginObj.enterUsername(element.valid_user)
+        loginObj.enterPassword(element.valid_pass)
         loginObj.verifyNOTEmtyUsernameInput()
         loginObj.verifyNOTEmtyPasswordInput()
         loginObj.submitLogin()
