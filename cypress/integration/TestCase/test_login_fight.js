@@ -3,14 +3,11 @@ describe('Test login', () => {
     const loginObj=new Login()
     
     beforeEach(function (){
-        //Get data from data_register_login.json
-        cy.fixture("data_register_login").then((demoData) => {
-            this.demoData= demoData;
-        })
-        //Get data from array_data_register_login.json
-        cy.fixture("array_data_login_register").then((item) =>{
-            this.demoDataSuccess=item.data_success
-            this.demoDataFail=item.data_fail
+        //Get data from suite_data_register_login.json
+        cy.fixture("suite_data_login_register").then((item) =>{
+            this.demoData=item.data.data_simple
+            this.mutiDemoDataSuccess=item.data.muti_data_success
+            this.mutiDemoDataFail=item.data.muti_data_fail
         })
     })
     it('Visit login page', () => {
@@ -54,7 +51,7 @@ describe('Test login', () => {
         loginObj.verifyTextSignOff()
     });
     it('Login surcess with muti data driven', function() {
-        this.demoDataSuccess.forEach(element => {
+        this.mutiDemoDataSuccess.forEach(element => {
         loginObj.visitLogin()
         loginObj.verifyVisibleLogin()
         loginObj.verifyEmtyUsernameInput()
@@ -74,7 +71,7 @@ describe('Test login', () => {
     });
     it('Login fail with muti data driven', function() {
         cy.log(this.demoDataFail)
-        this.demoDataFail.forEach(element => {
+        this.mutiDemoDataFail.forEach(element => {
         loginObj.visitLogin()
         loginObj.verifyVisibleLogin()
         loginObj.verifyEmtyUsernameInput()
