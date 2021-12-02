@@ -4,11 +4,9 @@ describe('Test book fight', () => {
     const bookflightObj = new BookFlight()
     //Get data from data_book_flight.json
     beforeEach(function () {
-        cy.fixture("data_book_flight").then((demoData) => {
-            this.demoData = demoData
-        })
-        cy.fixture("array_data_book_flight").then((item) => {
-            this.dameDataSuccess = item.data_success;
+        cy.fixture("suite_data_book_flight").then((item) => {
+            this.mutiDemoDataSuccess = item.data.muti_data_success;
+            this.demoData=item.data.data_simple
         })
     })
     it('visit The PAGE', () => {
@@ -64,7 +62,7 @@ describe('Test book fight', () => {
 
     it('Book fight with muti data driven', function () {
         //call function from bookflightObj to check radio, select option, submit and verify
-        this.dameDataSuccess.forEach(element => {
+        this.mutiDemoDataSuccess.forEach(element => {
             bookflightObj.visitBookFlight()
             bookflightObj.verifyVisibleBookSubmit()
             //call function from bookflightObj to check radio, select option, submit and verify
