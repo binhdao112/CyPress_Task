@@ -9,6 +9,10 @@ describe('Verify Register Account', () => {
             this.mutiDemoDataSuccess = item.data.muti_data_success
         })
     })
+    afterEach(() =>{
+        cy.log('Test success')
+        cy.screenshot()
+    })
     it('Visit The Page ', function () {
         registerObj.visitRegisterPage()
         // cy.visitHome()

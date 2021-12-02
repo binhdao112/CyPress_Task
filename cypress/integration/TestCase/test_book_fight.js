@@ -9,6 +9,10 @@ describe('Test book fight', () => {
             this.demoData=item.data.data_simple
         })
     })
+    afterEach(() => {
+        cy.log('Test success')
+        cy.screenshot()
+    })
     it('visit The PAGE', () => {
         // Go to http://demo.guru99.com/test/newtours/reservation.php
         //cy.visit("/reservation.php")
@@ -33,9 +37,6 @@ describe('Test book fight', () => {
         bookflightObj.submitBookFlight()
         bookflightObj.verifyAfterText()
         bookflightObj.verifyVisibleBackHomebtn()
-        cy.screenshot()
-        cy.log("success")
-
     })
     it('Book fight with data driven', function () {
         bookflightObj.visitBookFlight()
@@ -54,10 +55,6 @@ describe('Test book fight', () => {
         bookflightObj.submitBookFlight()
         bookflightObj.verifyAfterText()
         bookflightObj.verifyVisibleBackHomebtn()
-        cy.screenshot()
-        cy.log("success")
-
-
     });
 
     it('Book fight with muti data driven', function () {
@@ -79,12 +76,6 @@ describe('Test book fight', () => {
             bookflightObj.submitBookFlight()
             bookflightObj.verifyAfterText()
             bookflightObj.verifyVisibleBackHomebtn()
-            cy.screenshot()
-            cy.log("success")
         });
-
-
-
-
     });
 })

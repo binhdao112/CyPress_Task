@@ -10,6 +10,10 @@ describe('Test login', () => {
             this.mutiDemoDataFail=item.data.muti_data_fail
         })
     })
+    afterEach(() => {
+        cy.log("Test success")
+        cy.screenshot()
+    });
     it('Visit login page', () => {
         // Go to http://demo.guru99.com/test/newtours/
         // commands add in command.js in support
