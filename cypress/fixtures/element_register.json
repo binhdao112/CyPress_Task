@@ -1,8 +1,0 @@
-{
-  "logo": "[src='images/banner2.gif']",
-  "reg_btn": "[width='77'] > [href='register.php']",
-  "user": "#email",
-  "pass": "[name='password']",
-  "re_pass": "[name='confirmPassword']",
-  "submit_btn": "[name='submit']"
-}
