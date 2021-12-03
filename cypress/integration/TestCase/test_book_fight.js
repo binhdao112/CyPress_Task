@@ -14,14 +14,10 @@ describe('Test book fight', () => {
         cy.screenshot()
     })
     it('visit The PAGE', () => {
-        // Go to http://demo.guru99.com/test/newtours/reservation.php
-        //cy.visit("/reservation.php")
-        cy.visitHome()
-        cy.get('a[href="reservation.php"]').click()
+        bookflightObj.visitBookFlight()
     })
     // skip test case
     it('Book fight not data driven', () => {
-        bookflightObj.visitBookFlight()
         bookflightObj.verifyVisibleBookSubmit()
         //call function from bookflightObj to check radio, select option, submit and verify
         bookflightObj.checkTripTypeRadio("oneway")
