@@ -6,7 +6,7 @@ pipeline{
         choice(name: "BROWsER", choices: ["chrome","edge","firefox"])
     }
     stages{
-        stage("Deploying"){
+        stage("Building"){
             steps{
                 echo "Building the application"
             }
