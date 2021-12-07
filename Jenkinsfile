@@ -2,7 +2,7 @@ pipeline{
     agent any
 
     parameters{
-        string(name: "SPEC", defaultValue: "cypress/intergration/**/**")
+        string(name: "SPEC", defaultValue: "cypress/integration/**/**")
         choice(name: "BROWsER", choices: ["chrome","edge","firefox"])
     }
     stages{
@@ -14,7 +14,7 @@ pipeline{
         stage("Testing"){
             steps{
                 bat "npm install"
-                bat "npx cypress run --browser ${BROWSER}"
+                bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
             }
         }
         stage("Deploying"){
