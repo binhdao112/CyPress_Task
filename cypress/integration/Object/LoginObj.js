@@ -52,7 +52,7 @@ class Login {
         return this
     }
     verifyTextLoginFail(){
-        this.elementpage.FailText().should('contain.text',"Enter your userName and password correct")
+        this.elementpage.FailText().should('contain.text',"Enter youưr userName and password correct")
         return this
     }
 }
