@@ -30,4 +30,4 @@ HTML Report
 * In UI in HTML report Cypress:
 ![image](https://user-images.githubusercontent.com/54032190/144001156-67b41673-f431-473c-8e15-109b090ced24.png)
 
-you can see and apply HTML Report in [HTMP Report CyPress](https://docs.cypress.io/guides/tooling/reporters#Merging-reports-across-spec-files)
+you can see and apply HTML Report in [HTMP Report CyPress](https://docs.cypress.io/guides/tooling/reporters#Merging-reports-across-spec-files).
