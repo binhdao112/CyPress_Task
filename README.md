@@ -39,4 +39,4 @@ Allure Reports
 * In terminal, use `npm run allure:clear` to clear Allure exist in your System
 * UI of Allure report:
 ![image](https://user-images.githubusercontent.com/54032190/145239429-c8303f8c-88a4-48b5-8f76-5b2c70101a01.png)
-
+you can see and apply Allure Report in Cypress in [Cypress Allure Report](https://github.com/Shelex/cypress-allure-plugin).
