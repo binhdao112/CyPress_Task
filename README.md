@@ -31,3 +31,12 @@ HTML Report
 ![image](https://user-images.githubusercontent.com/54032190/144001156-67b41673-f431-473c-8e15-109b090ced24.png)
 
 you can see and apply HTML Report in [HTMP Report CyPress](https://docs.cypress.io/guides/tooling/reporters#Merging-reports-across-spec-files).
+
+Allure Reports
+---------------
+* In Terminal, use `npm run cy:run` or `npx cypress run --env allure=true` to run all test and create Allure-results
+* In terminal, use `npm run posttest` or `npx npm run allure:report` to generate Allure-reports
+* In terminal, use `npm run allure:clear` to clear Allure exist in your System
+* UI of Allure report:
+![image](https://user-images.githubusercontent.com/54032190/145239429-c8303f8c-88a4-48b5-8f76-5b2c70101a01.png)
+
