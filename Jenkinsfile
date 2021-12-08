@@ -14,6 +14,7 @@ pipeline{
         stage("Testing"){
             steps{
                 bat "npm install"
+                bat "npm run allure:clear"
                 bat "npx cypress run --browser ${BROWSER} --spec ${SPEC} --env allure=true"
                 bat "npm run posttest"
             }
