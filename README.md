@@ -21,7 +21,7 @@ Open and Start test with Cypress:
   
   **Ex: `npx cypress run --brower chrome` or `npm run cypress:run:chrome`**
   
-  You can see them in [Launching Browsers](https://docs.cypress.io/guides/guides/launching-browsers#Browsers)
+  You can see them in [Launching Browsers](https://docs.cypress.io/guides/guides/launching-browsers#Browsers).
 
 HTML Report
 ---------------
