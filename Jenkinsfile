@@ -38,11 +38,15 @@ pipeline{
                     }
             }
         stage('Send mail') {
-            mail bcc: '', 
-            body: 'STARTED: Job ${env.JOB_NAME}', cc: '', 
-            from: '', replyTo: '', 
-            subject: 'STARTED: Job ${env.JOB_NAME}', 
-            to: '0932907271binh@gmail.com'
+            steps {
+                echo "Ok"
+            }
+        }
+    }
+    post {
+        always {
+            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+        }
     }
 
     }
