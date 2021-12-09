@@ -39,14 +39,9 @@ pipeline{
             }
         stage('Send mail') {
             steps {
-                echo "Ok"
+                mail(body: 'Test', subject: 'Test', to: '0932907271binh@gmail.com')
             }
         }
     
-    post {
-        always {
-            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
-        }
     }
-    }
-    }
+}
