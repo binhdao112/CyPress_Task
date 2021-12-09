@@ -43,7 +43,7 @@ pipeline{
                 //def mailRecipients = ""
                // def jobName = currentBuild.fullDisplayName
                 script{
-                    emailext(body: '''${SCRIPT, template="my-email.template"}''',
+                    emailext(body: 'dfsdfsd',
                     subject: "[Jenkins]",
                     to: "0932907271binh@gmail.com",
                     replyTo: "")
