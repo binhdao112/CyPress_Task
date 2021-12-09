@@ -38,8 +38,17 @@ pipeline{
                     }
             }
         stage('Send mail') {
+
             steps {
-                    mail(body: 'test', subject: 'Test '+{$env.JOB_NAME}, to: '0932907271binh@gmail.com')
+                def mailRecipients = "0932907271binh@gmail.com"
+                def jobName = currentBuild.fullDisplayName
+
+                emailext body: '''${SCRIPT, template="my-email.template"}''',
+                subject: "[Jenkins] ${jobName}",
+                to: "${mailRecipients}",
+                replyTo: "${mailRecipients}",
+                recipientProviders: [[$class: 'CulpritsRecipientProvider']]
+                   // mail(body: 'test', subject: 'Test '+{$env.JOB_NAME}, to: '0932907271binh@gmail.com')
                 //mail(body: readFile('cypress/reports/index.html'),mimeType: 'text/html', subject: 'Test '+{$env.JOB_NAME}, to: '0932907271binh@gmail.com')
             }
         }
