@@ -39,7 +39,7 @@ pipeline{
             }
         stage('Send mail') {
             steps {
-                mail(body: ${JELLY_SCRIPT,template="html"} , subject: 'Test '+{$env.JOB_NAME}, to: '0932907271binh@gmail.com')
+                mail(body: ${SCRIPT,template="groovy-html.template"} , subject: 'Test '+{$env.JOB_NAME}, to: '0932907271binh@gmail.com')
             }
         }
         
