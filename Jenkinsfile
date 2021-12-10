@@ -42,15 +42,15 @@ pipeline{
             steps {
                 //def mailRecipients = ""
                // def jobName = currentBuild.fullDisplayName
-                script{
-                    emailext(body: 'dfsdfsd',
-                    subject: "[Jenkins]",
-                    to: "0932907271binh@gmail.com",
-                    replyTo: "")
-                }
+                // script{
+                //     emailext(body: 'dfsdfsd',
+                //     subject: "[Jenkins]",
+                //     to: "0932907271binh@gmail.com",
+                //     replyTo: "")
+                // }
                 
                 //recipientProviders: [[$class: 'CulpritsRecipientProvider']]
-                   // mail(body: 'test', subject: 'Test '+{$env.JOB_NAME}, to: '0932907271binh@gmail.com')
+                    mail(body: 'test', subject: 'Test '+{$env.JOB_NAME}, to: '0932907271binh@gmail.com')
                 //mail(body: readFile('cypress/reports/index.html'),mimeType: 'text/html', subject: 'Test '+{$env.JOB_NAME}, to: '0932907271binh@gmail.com')
             }
         }
