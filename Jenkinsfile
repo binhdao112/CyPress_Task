@@ -5,6 +5,9 @@ pipeline{
         string(name: "SPEC", defaultValue: "cypress/integration/**/**")
         choice(name: "BROWsER", choices: ["chrome","edge","firefox"])
     }
+    tools{
+        nodejs '18.3'
+    }
     stages{
         stage("Building"){
             steps{
