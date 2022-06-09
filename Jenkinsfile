@@ -18,7 +18,7 @@ pipeline{
             steps{
                 sh "npm install"
                 sh "npm audit fix --force"
-                sh "npm run allure:clear"
+//                 sh "npm run allure:clear"
                 sh "npx cypress run --browser ${BROWSER} --spec ${SPEC} --env allure=true"
                 sh "npm run posttest"
             }
