@@ -31,15 +31,16 @@ pipeline{
         }
         stage('reports') {
             steps {
-                script {
-                    allure([
-                    includeProperties: false,
-                    jdk: '',
-                    properties: [],
-                    reportBuildPolicy: 'ALWAYS',
-                    results: [[path: 'target/allure-results']]
-                            ])
-                        }
+//                 script {
+//                     allure([
+//                     includeProperties: false,
+//                     jdk: '',
+//                     properties: [],
+//                     reportBuildPolicy: 'ALWAYS',
+//                     results: [[path: 'target/allure-results']]
+//                             ])
+//                         }
+                echo "Chuẩn bị report nha" 
                     }
             }
         stage('Send mail') {
@@ -53,7 +54,8 @@ pipeline{
                 //     to: "0932907271binh@gmail.com",
                 //     replyTo: "")
                 // }
-                emailext body: 'áda', subject: 'alo', to: '0932907271binh@gmail.com'
+                echo "Đang send mail"
+//                 emailext body: 'áda', subject: 'alo', to: '0932907271binh@gmail.com'
                 //recipientProviders: [[$class: 'CulpritsRecipientProvider']]
                  //   mail(body: 'test', subject: 'Test '+{$env.JOB_NAME}, to: '0932907271binh@gmail.com')
                 //mail(body: readFile('cypress/reports/index.html'),mimeType: 'text/html', subject: 'Test '+{$env.JOB_NAME}, to: '0932907271binh@gmail.com')
